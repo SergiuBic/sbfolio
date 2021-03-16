@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" style="overflow: auto; max-heigth:100%; height:100%;">
 
 <div class='justify-center pt-3'>
 <h1 class="box">Thanks for reaching out !</h1>

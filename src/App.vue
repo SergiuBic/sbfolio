@@ -2,20 +2,20 @@
 <v-app >
 <v-main>
   <div class="portrait" v-show="portrait">
-<div class="phone">
+<div class="phone text--red text--acent-2" >
 </div>
-<div class="message">
+<div class="message red--text text--accent-2">
   Please rotate your device!
 </div>
 </div>
- <v-card outlined class="rounded-0 grey darken-4 white--text diagonal-container-0 " v-show="landscape">
+ <v-card outlined class="rounded-0 grey darken-4 white--text diagonal-container-0 " v-show="landscape||desktop">
    <v-avatar max-width='180px' width="180px" class="redressed mx-0 my-0 py-6 px-0 d-block logo-title red--text text--accent-2"><a href="/" id="sergiu-text-gsap"></a></v-avatar>
  <v-card outlined  class="my-0 d-flex fex-row rounded-0 red accent-2 white--text diagonal-container" height="100%" max-width="100%" >
 
 <v-row style="flex-wrap: nowrap;" align="center" justify="center" class="mx-0 my-0 py-0 px-0 row-content"> 
  <v-col
    cols="1"
-   :style="toggleActive ? `${item.active ? `${item.minwidth} height:100%; max-height:100%;`:'min-width:10%;max-height:100%;overflow:hidden;'}` : 'min-width:25%; height:100%; max-height:100%;'"
+   :style="toggleActive ? `${item.active ? `${item.minwidth} height:100%; max-height:100%;`:'min-width:10%;max-height:100%;height:100%;overflow:hidden;'}` : 'min-width:25%; height:100%; max-height:100%;'"
    class="mx-0 my-0 px-0 py-0 menu-content"
    :class="item.active ? item.style : ''"
    v-for="(item,index) in links" 
@@ -25,7 +25,7 @@
   <v-card
    class="red accent-2 white--text mx-0 my-0 py-0 px-0"
    width="100%"
-   :style="toggleActive ? `${item.active? 'height:100%;' : 'height:86%'}`:'height: 100%;'"
+   :style="toggleActive ? `${item.active? 'height:100%;' : 'height:100vh;'}`:'height: 100%;'"
    outlined
    tile
    :class="toggleActive ? `${item.active ? 'text-h6':'vertical-text text-subtitle-2'}`:''"
@@ -58,6 +58,7 @@ export default({
     return{
       portrait: false,
       landscape:false,
+      desktop: false,
       toggleActive: false,
       minwidth: "min-width: 20%;",
       links: [
@@ -73,21 +74,42 @@ export default({
       "orientationchange",
       this.handleOrientationChange
     );
+    this.handleOrientationChange();
 
     gsap.from(".diagonal-container",{scaleY:0,duration:1.5,delay:0.1})
     gsap.to("#sergiu-text-gsap", {text: {value: "Sergiu Bîc"}, duration: 3, delay: 1, ease: "none"})
   },
  methods: {
    handleOrientationChange() {
+      const ua = navigator.userAgent;
       const orientation = window.screen.orientation.type
+      console.log("yolo")
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)  || /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+    ua
+    )) 
+  {
+    //tablet - phone
       if (orientation === "portrait-primary") {
-
+        
+        console.log("portrait")
              this.portrait = true
              this.landscape = false
+             this.desktop = false
         } else if (orientation === "landscape-primary") {
-             this.landscape = true
+          console.log("landscape")
+          this.landscape = true
              this.portrait = false
+             this.desktop = true
       }
+  }
+  else{
+    //desktop
+    console.log("desktop")
+    this.desktop = true;
+    this.landscape = false;
+    this.portrait = false;
+  }
+    
     },
    toggleItem : function(item){
      for (let index = 0; index < this.links.length; index++) {
@@ -193,18 +215,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color:#212121;
+
 }
 .phone {
   height: 50px;
   width: 100px;
-  border: 3px solid black;
+  border: 3px solid red;
   border-radius: 10px;
   animation: rotate 1.5s ease-in-out infinite alternate;
   /* display: none; */
 }
 
 .message {
-  color: black;
+  
   font-size: 1em;
   margin-top: 40px;
   /* display: none; */
