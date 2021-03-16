@@ -1,7 +1,14 @@
 <template>
 <v-app >
- <v-main>
- <v-card outlined class="rounded-0 grey darken-4 white--text diagonal-container-0">
+<v-main>
+  <div class="portrait" v-show="portrait">
+<div class="phone">
+</div>
+<div class="message">
+  Please rotate your device!
+</div>
+</div>
+ <v-card outlined class="rounded-0 grey darken-4 white--text diagonal-container-0 " v-show="landscape">
    <v-avatar max-width='180px' width="180px" class="redressed mx-0 my-0 py-6 px-0 d-block logo-title red--text text--accent-2"><a href="/" id="sergiu-text-gsap"></a></v-avatar>
  <v-card outlined  class="my-0 d-flex fex-row rounded-0 red accent-2 white--text diagonal-container" height="100%" max-width="100%" >
 
@@ -49,6 +56,8 @@ gsap.registerPlugin(TextPlugin);
 export default({
   data(){
     return{
+      portrait: false,
+      landscape:false,
       toggleActive: false,
       minwidth: "min-width: 20%;",
       links: [
@@ -60,10 +69,26 @@ export default({
     }
   },
   mounted: function(){
+     window.addEventListener(
+      "orientationchange",
+      this.handleOrientationChange
+    );
+
     gsap.from(".diagonal-container",{scaleY:0,duration:1.5,delay:0.1})
     gsap.to("#sergiu-text-gsap", {text: {value: "Sergiu Bîc"}, duration: 3, delay: 1, ease: "none"})
   },
  methods: {
+   handleOrientationChange() {
+      const orientation = window.screen.orientation.type
+      if (orientation === "portrait-primary") {
+
+             this.portrait = true
+             this.landscape = false
+        } else if (orientation === "landscape-primary") {
+             this.landscape = true
+             this.portrait = false
+      }
+    },
    toggleItem : function(item){
      for (let index = 0; index < this.links.length; index++) {
        const element = this.links[index];
@@ -160,5 +185,46 @@ body {
 }
 .view-container{
   transition: 1s ease-in-out;
+}
+.portrait{
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.phone {
+  height: 50px;
+  width: 100px;
+  border: 3px solid black;
+  border-radius: 10px;
+  animation: rotate 1.5s ease-in-out infinite alternate;
+  /* display: none; */
+}
+
+.message {
+  color: black;
+  font-size: 1em;
+  margin-top: 40px;
+  /* display: none; */
+}
+
+@keyframes rotate {
+  0% {
+		transform: rotate(0deg)
+	}
+	50% {
+		transform: rotate(-90deg)
+	}
+	100% {
+		transform: rotate(-90deg)
+	}
+}
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+  .phone, .message {
+    display: block;
+  }
 }
 </style>
