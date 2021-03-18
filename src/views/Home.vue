@@ -8,7 +8,7 @@
          </v-card-title>
        <v-divider inset></v-divider>
        <v-card-text>
-        I am a <b>full stack web developer</b> <span class='blue--text text--accent-3'>&amp;</span> I enjoy creating digital products!
+        I am a <b>full-stack web developer/ survey programmer</b> <span class='blue--text text--accent-3'>&amp;</span> I enjoy creating digital products!
        </v-card-text>
        </v-card>
       
