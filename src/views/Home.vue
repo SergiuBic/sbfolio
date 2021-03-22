@@ -8,7 +8,7 @@
          </v-card-title>
        <v-divider inset></v-divider>
        <v-card-text>
-        I am a <b>full-stack web developer/ survey programmer</b> <span class='blue--text text--accent-3'>&amp;</span> I enjoy creating digital products!
+        I am a <b>survey programmer/ passionate web developer</b> <span class='blue--text text--accent-3'>&amp;</span> I enjoy creating digital products!
        </v-card-text>
        </v-card>
       
@@ -31,8 +31,7 @@
       <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="logo-javascript" class="orange thin mr-1"></ion-icon>&nbsp;JavaScript</v-btn>
       <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="logo-html5" class="green thin mr-1"></ion-icon>&nbsp;HTML/<ion-icon name="logo-css3"></ion-icon>&nbsp; CSS</v-btn>
       <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="logo-python" class="yellow thin mr-1"></ion-icon>&nbsp;Python</v-btn>
-      <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="logo-microsoft" class="primary thin mr-1"></ion-icon>&nbsp;C# (Med)</v-btn>
-      <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="cafe-outline" class="blue thin mr-1"></ion-icon>&nbsp;Java (Entry)</v-btn>
+      <v-btn outlined class="pa-2 ma-2 box3" rounded><ion-icon name="logo-microsoft" class="primary thin mr-1"></ion-icon>&nbsp;C#</v-btn>
   
      <v-divider class="my-2"></v-divider>
       <v-card-title class='justify-center'> Frameworks, libraries and tools:</v-card-title>

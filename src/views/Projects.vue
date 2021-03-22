@@ -47,7 +47,7 @@ export default {
      "First step? Customer research obviously!",
      "The customer main work domain is mixed but focused on industrial wood thingy. Ok ok, so good so far, but how can we mix the others ?",
      "I found the MaterializeCSS the best choice here as it's like a Marvel hero for mixed things while other frameworks seem overused for me. Just my opinion.",
-     "On this project, I've learned lots of things about design responsiveness, git pages and how to properly set-up a Domain, a CMS etc."]
+     "On this project, I've learned lots of things about design responsiveness, git pages and how to properly set-up a Domain Name, a DNS etc."]
      },
      {id:4, name: "EM's", to: "https://play.google.com/store/apps/details?id=com.BLENCStudio.Ems&amp;hl=en&amp;gl=US", img:"../assets/ems.jpg", title: "Unity3D/C# Arcade Game", 
      content: ["My gift for my daughter.",
