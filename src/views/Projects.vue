@@ -1,7 +1,7 @@
 <template>
 <v-container fluid>
   
-<v-tabs slider-color="blue" grow show-arrows>
+<v-tabs slider-color="blue" grow show-arrows :vertical="$vuetify.breakpoint.mdAndUp">
       <v-tab v-for="project in projects" :key="project.id">
         {{project.name}}
       </v-tab>
@@ -74,14 +74,20 @@ export default {
      "The main idea was simple: Custom furniture portofolio",
      "I've used my previous knwoledge to get this SEO right, along with the colors, logo and other stuff."]
      },
-     {id:7, name: "HappySwing", to: "https://play.google.com/store/apps/details?id=com.BLENCStudio.HappySwing&amp;hl=en&amp;gl=US", img:"../assets/happyswing.jpg", title: "Unity3D/C# Endless Game", 
+      {id:7, name: "Declaration on own responsability", to: "https://sergiubic-dpr.netlify.app", img:"../assets/reactsimple.jpg", title: "Front End ReactJS", 
+     content: ["Feeling more confortable with ReactJS's fundamentals.","Currently the app works only on Desktop/Laptop devices and it will generate a declaration in the romanian language very quickly. Thanks React!",
+     "The workflow was relatively easy and I just used states without any props or components. I will definately update it for a better performance. Also TailwindCSS was kind of handy.",
+     "It was just a side idea which came into my mind and I felt like it must be part of my learning react path.","I learn by doing things, good or bad, doesn't matter.",
+     "Cheers :)"]
+     },
+     {id:8, name: "HappySwing", to: "https://play.google.com/store/apps/details?id=com.BLENCStudio.HappySwing&amp;hl=en&amp;gl=US", img:"../assets/happyswing.jpg", title: "Unity3D/C# Endless Game", 
      content: ["After creating Em's, I couldn't stop!",
      "I knew that I can do this thing again without any assitance and I did !",
      "So I've bought some pre-made assets to make it look more cooler. My 3D modeling skills kinda suck..",
      "But this time was different, this time I get deeper into the C# language and learned the best practices for the best FPS and optimizations.",
      "This time, the game developing experience was friendly and I've took down the unknown."]
      },
-     {id:8, name: "My Portofolio", to: "#", img:"", title: "Front End VueJS/Vuetify", 
+     {id:9, name: "My Portofolio", to: "#", img:"", title: "Front End VueJS/Vuetify", 
      content: ["Well, nowadays every web developer must have a portofolio.",
      "Coffee check, VueJS check, Vuetify check, Cool blue theme check, Firebase ? Maybe later!",
      "Just exploring Vuetify here and it's cool features.",
