@@ -64,12 +64,11 @@ export default {
      "Then I just launch it. Do you know what ? NOW the real developing starts! I've spend another month optimizing, advertising, re-sketching, re-programing etc.",
      "It was my favourite journey into the unknown!"]
      },
-     {id:6, name: "Simple To Do List", to: "https://sergiubic.github.io/ReactSimpleToDo", img:"../assets/reactsimple.jpg", title: "Front End ReactJS", 
-     content: ["While learning ReactJS, I did what all the great developers do: a to do list.",
-     "Please ignore the CSS as the main purpose was to understand states & props. Mostly, how this thing works ?",
-     "After a while, and mostly after some long unfinished projects like Calculator, Data Fetching etc., I've discovered VueJS which has a more beginner-friendly learning path.",
-     "Don't get me wrong, React is great but the learning curve needs more time than Vue",
-     "Maybe on a real-world project I will definately enjoy it!","See you soon React"]
+    {id:6, name: "Declaration on own responsability", to: "https://sergiubic-dpr.netlify.app", img:"../assets/reactsimple.jpg", title: "Front End ReactJS", 
+     content: ["With tiny steps, I learn and develop my ReactJS skills!","Currently the app works only on Desktop/Laptop devices and it will generate a declaration in the romanian language very quickly. Thanks React!",
+     "The workflow was relatively easy. I will definately update it for a better performance. Also TailwindCSS was kind of handy.",
+     "It was just a side idea which came into my mind and I felt like it must be part of my learning react path.","I learn by doing things, good or bad, doesn't matter.",
+     "Cheers :)"],
      },
      {id:7, name: "IncognitoDesign", to: "https://slavicicenei.ro/IncognitoDesign", img:"../assets/IncognitoDesign.jpg", title: "Front End JS/MaterializeCSS", 
      content: ["Great case study with another happy customer!",
@@ -78,11 +77,10 @@ export default {
      "The main idea was simple: Custom furniture portofolio",
      "I've used my previous knwoledge to get this SEO right, along with the colors, logo and other stuff."]
      },
-      {id:8, name: "Declaration on own responsability", to: "https://sergiubic-dpr.netlify.app", img:"../assets/reactsimple.jpg", title: "Front End ReactJS", 
-     content: ["Feeling more comfortable with ReactJS's fundamentals.","Currently the app works only on Desktop/Laptop devices and it will generate a declaration in the romanian language very quickly. Thanks React!",
-     "The workflow was relatively easy and I just used states without any props or components. I will definately update it for a better performance. Also TailwindCSS was kind of handy.",
-     "It was just a side idea which came into my mind and I felt like it must be part of my learning react path.","I learn by doing things, good or bad, doesn't matter.",
-     "Cheers :)"]
+    {id:8, name: "Simple To Do List", to: "https://sergiubic.github.io/ReactSimpleToDo", img:"../assets/reactsimple.jpg", title: "Front End ReactJS", 
+     content: ["While learning ReactJS, I did what all the great developers do: a to do list.",
+     "Please ignore the CSS as the main purpose was to understand states & props. Mostly, how this thing works ?",
+     "This tiny library is awesome!!"]
      },
      {id:9, name: "HappySwing", to: "https://play.google.com/store/apps/details?id=com.BLENCStudio.HappySwing&amp;hl=en&amp;gl=US", img:"../assets/happyswing.jpg", title: "Unity3D/C# Endless Game", 
      content: ["After creating Em's, I couldn't stop!",
